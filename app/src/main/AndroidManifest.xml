@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SazonApp">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
