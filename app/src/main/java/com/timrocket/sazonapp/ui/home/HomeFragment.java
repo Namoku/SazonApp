@@ -48,7 +48,9 @@ public class HomeFragment extends Fragment {
       public void onClick(View view) {
         FirebaseAuth.getInstance().signOut();
         Intent i = new Intent(getContext(), LoginActivity.class);
+        i.setFlags(i.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
+        getActivity().finish();
       }
     });
 
