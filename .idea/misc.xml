@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/button_bg.xml" value="0.1" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/edit_text_bg.xml" value="0.1" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/icon_next.xml" value="0.1" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/vie_bg.xml" value="0.1" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/layout/activity_login.xml" value="0.10740740740740741" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.10740740740740741" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/layout/signup_tab_fragment.xml" value="0.10740740740740741" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14893617021276595" />
       </map>
     </option>
