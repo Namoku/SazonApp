@@ -28,14 +28,10 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        //Obtenemos la isntancia de la base de datos para autentificar los usuarios
         firebaseAuth = FirebaseAuth.getInstance();
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
-        //hacemos validacion de que se ingrese un formato de correo aceptado
         awesomeValidation.addValidation(this,R.id.edemail, Patterns.EMAIL_ADDRESS,R.string.invalid_email);
-        //hacemos validacion para que la contraseña tenga mas de 6 caracteres
         awesomeValidation.addValidation(this,R.id.edpassword,".{6,}",R.string.invalid_pass);
-
         et1 = (EditText) findViewById(R.id.edemail);
         et2 = (EditText) findViewById(R.id.edpassword);
         registrar = (Button) findViewById(R.id.btncrear);
