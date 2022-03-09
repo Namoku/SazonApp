@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SazonApp">
         <activity
+            android:name=".SignupTabFragment"
+            android:exported="true" />
+        <activity
+            android:name=".LoginTabFragment"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
