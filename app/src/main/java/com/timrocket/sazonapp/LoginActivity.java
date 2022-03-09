@@ -18,7 +18,6 @@ public class LoginActivity extends AppCompatActivity {
     float v = 0;
     private String[] titles = new String[]{"Login", "Signup"};
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

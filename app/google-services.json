@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "442065217322",
+    "firebase_url": "https://sazonapp-befdc-default-rtdb.firebaseio.com",
+    "project_id": "sazonapp-befdc",
+    "storage_bucket": "sazonapp-befdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442065217322:android:9203a1d2c39e0f28512053",
+        "android_client_info": {
+          "package_name": "com.timrocket.sazonapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442065217322-kb0p6k05cl4pgbdre4mbg45g4o0okbaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu6WEnPjKCt7LL2J9a-jGW9v4oH87_dP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442065217322-kb0p6k05cl4pgbdre4mbg45g4o0okbaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
