@@ -10,16 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SazonApp">
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
+            android:name=".SignupTabFragment"
+            android:exported="true" />
+        <activity
+            android:name=".LoginTabFragment"
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.SazonApp.NoActionBar" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
