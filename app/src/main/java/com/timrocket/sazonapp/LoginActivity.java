@@ -16,7 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     FloatingActionButton google;
     float v = 0;
-    private String[] titles = new String[]{"Login", "Signup"};
+    private String[] titles = new String[]{"Iniciar sesión", "Registrarse"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
