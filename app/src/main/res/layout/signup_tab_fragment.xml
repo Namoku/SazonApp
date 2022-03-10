@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
-        android:hint="Email"
+        android:hint="Correo electrónico"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -64,7 +64,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
-        android:hint="Confirma contraseña"
+        android:hint="Confirmar contraseña"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -82,7 +82,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
-        android:text="Sign Up"
+        android:text="Registrarse"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password2"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintWidth_percent=".8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
