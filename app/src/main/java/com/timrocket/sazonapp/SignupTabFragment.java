@@ -1,6 +1,5 @@
 package com.timrocket.sazonapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -19,8 +18,8 @@ public class SignupTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
 
-        email = root.findViewById(R.id.email);
-        contraseña = root.findViewById(R.id.password);
+        email = root.findViewById(R.id.etemail);
+        contraseña = root.findViewById(R.id.etpassword);
         confcontraseña = root.findViewById(R.id.password2);
         nombre = root.findViewById(R.id.nombre);
         signup = root.findViewById(R.id.Btn_signup);
