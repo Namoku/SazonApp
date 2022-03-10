@@ -36,12 +36,6 @@ public class LoginTabFragment extends Fragment {
 
         //Obtenemos la isntancia de la base de datos para autentificar los usuarios
         firebaseAuth = FirebaseAuth.getInstance();
-        //Verificamos si ya hay una sesion iniciada
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
-        //if(user != null){
-        //gohome();
-        //}
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         //hacemos validacion de que se ingrese un formato de correo aceptado
@@ -100,7 +94,6 @@ public class LoginTabFragment extends Fragment {
         a.putExtra("mail",email.getText().toString());
         a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(a);
-        getActivity().finish();
     }
 
 }
