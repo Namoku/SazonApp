@@ -24,7 +24,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/etemail"
+        android:id="@+id/etemail1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
@@ -42,7 +42,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/etpassword"
+        android:id="@+id/etpassword1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etemail"
+        app:layout_constraintTop_toBottomOf="@+id/etemail1"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpassword"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword1"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
