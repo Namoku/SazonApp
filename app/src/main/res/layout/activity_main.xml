@@ -6,34 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent=".8"
-        app:layout_constraintVertical_bias=".3"
-        app:layout_constraintHorizontal_bias=".5"
-        android:background="@drawable/edit_text_bg"
-        android:hint="Email"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+    <ImageView
+        android:id="@+id/bg_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="730dp"
+        android:background="@drawable/vie2_bg"
+        android:src="@drawable/bg_fondo"
+        app:layout_constraintVertical_bias="0"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/icon_next"
-        app:layout_constraintVertical_bias="1"
-        app:layout_constraintHorizontal_bias="1"
-        android:layout_margin="16dp"
+    <ImageView
+        android:id="@+id/app_name"
+        android:layout_width="450dp"
+        android:layout_height="730dp"
+        android:src="@drawable/lg_sazonapp"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/food" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
