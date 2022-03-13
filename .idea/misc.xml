@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/button_bg.xml" value="0.2203125" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/edit_text_bg.xml" value="0.215625" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.215625" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.215625" />
@@ -15,6 +16,7 @@
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/app_bar_home.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/content_home.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/fragment_buscar.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/fragment_gallery.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/fragment_home.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.19947916666666668" />
@@ -22,6 +24,7 @@
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/layout/signup_tab_fragment.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.67" />
         <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/menu/home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/jgome/AndroidStudioProjects/SazonApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/button_bg.xml" value="0.1" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/edit_text_bg.xml" value="0.1" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/SazonApp/app/src/main/res/drawable/icon_next.xml" value="0.1" />
