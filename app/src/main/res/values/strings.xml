@@ -11,10 +11,12 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    
+
     <string name="invalid_email">Ingrese un email valido</string>
     <string name="invalid_name">Ingrese un nombre o apodo</string>
     <string name="invalid_pass">Ingresa una contraseña de mas de 6 caracteres</string>
     <string name="err_password_confirmation">Las contraseñas no coinciden</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

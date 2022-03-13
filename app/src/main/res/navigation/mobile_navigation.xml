@@ -9,17 +9,91 @@
         android:id="@+id/nav_home"
         android:name="com.timrocket.sazonapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_fragmentBuscar"
+            app:destination="@id/nav_buscar" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentOriental"
+            app:destination="@id/nav_oriental" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentAntojitos"
+            app:destination="@id/nav_antojitos" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentVegana"
+            app:destination="@id/nav_vegana" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentRapida"
+            app:destination="@id/nav_rapida" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentGourmet"
+            app:destination="@id/nav_gourmet" />
+        <action
+            android:id="@+id/action_nav_home_to_fragmentTematica"
+            app:destination="@id/nav_tematica" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.timrocket.sazonapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_buscar"
+        android:name="com.timrocket.sazonapp.FragmentBuscar"
+        android:label="Restaurantes cercanos"
+        tools:layout="@layout/fragment_buscar" >
+        <action
+            android:id="@+id/action_fragmentBuscar_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.timrocket.sazonapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_oriental"
+        android:name="com.timrocket.sazonapp.FragmentOriental"
+        android:label="Comida oriental"
+        tools:layout="@layout/fragment_oriental" >
+        <action
+            android:id="@+id/action_fragmentOriental_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_antojitos"
+        android:name="com.timrocket.sazonapp.FragmentAntojitos"
+        android:label="Antojitos mexicanos"
+        tools:layout="@layout/fragment_antojitos" >
+        <action
+            android:id="@+id/action_nav_antojitos_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_vegana"
+        android:name="com.timrocket.sazonapp.FragmentVegana"
+        android:label="Comida vegana"
+        tools:layout="@layout/fragment_vegana" >
+        <action
+            android:id="@+id/action_nav_vegana_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_rapida"
+        android:name="com.timrocket.sazonapp.FragmentRapida"
+        android:label="Comida rápida"
+        tools:layout="@layout/fragment_rapida" >
+        <action
+            android:id="@+id/action_nav_rapida_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_gourmet"
+        android:name="com.timrocket.sazonapp.FragmentGourmet"
+        android:label="Comida Gourmet"
+        tools:layout="@layout/fragment_gourmet" >
+        <action
+            android:id="@+id/action_nav_gourmet_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_tematica"
+        android:name="com.timrocket.sazonapp.FragmentTematica"
+        android:label="Restaurantes temáticos"
+        tools:layout="@layout/fragment_tematica" >
+        <action
+            android:id="@+id/action_nav_tematica_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
 </navigation>

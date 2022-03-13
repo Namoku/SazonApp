@@ -5,16 +5,36 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_buscar"
+            android:icon="@drawable/ubicacion"
+            android:title="Buscar restaurantes cercanos" />
     </group>
+    <item android:title="Categorías"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_oriental"
+            android:icon="@drawable/oriental"
+            android:title="Oriental" />
+        <item
+            android:id="@+id/nav_antojitos"
+            android:icon="@drawable/antojitos"
+            android:title="Antojitos" />
+        <item
+            android:id="@+id/nav_vegana"
+            android:icon="@drawable/vegana"
+            android:title="Vegana" />
+        <item
+            android:id="@+id/nav_rapida"
+            android:icon="@drawable/rapida"
+            android:title="Rápida" />
+        <item
+            android:id="@+id/nav_gourmet"
+            android:icon="@drawable/gourmet"
+            android:title="Gourmet" />
+        <item
+            android:id="@+id/nav_tematica"
+            android:icon="@drawable/tematico"
+            android:title="Temática" />
+    </group>
+
 </menu>
