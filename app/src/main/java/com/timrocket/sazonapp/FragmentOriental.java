@@ -1,12 +1,19 @@
 package com.timrocket.sazonapp;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,6 +44,25 @@ public class FragmentOriental extends Fragment {
      * @return A new instance of fragment FragmentOriental.
      */
     // TODO: Rename and change types and number of parameters
+
+
+    private void getData (FirebaseFirestore db, String category) {
+        db.collection("Restaurants")
+                .whereEqualTo("category", category)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("TAG", document.getId() + " => " + document.getData());
+                            }
+                        } else {
+                            Log.w("TAG", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+    }
     public static FragmentOriental newInstance(String param1, String param2) {
         FragmentOriental fragment = new FragmentOriental();
         Bundle args = new Bundle();
@@ -58,6 +84,8 @@ public class FragmentOriental extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        getData(db, "oriental");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_oriental, container, false);
     }
