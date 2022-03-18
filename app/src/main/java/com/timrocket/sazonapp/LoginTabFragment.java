@@ -1,8 +1,5 @@
 package com.timrocket.sazonapp;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -14,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,7 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginTabFragment extends Fragment {
-    EditText email, contraseña;
+    EditText email, pass;
     Button login;
     TextView forgetPass;
     FirebaseAuth firebaseAuth;
@@ -43,31 +43,36 @@ public class LoginTabFragment extends Fragment {
         awesomeValidation.addValidation(getActivity(),R.id.etpassword,".{6,}",R.string.invalid_pass);
 
         email = root.findViewById(R.id.etemail);
-        contraseña = root.findViewById(R.id.etpassword);
+        pass = root.findViewById(R.id.etpassword);
         login = root.findViewById(R.id.Btn_login);
         forgetPass = root.findViewById(R.id.forgetpass);
 
         email.setTranslationX(0);
-        contraseña.setTranslationX(0);
+        pass.setTranslationX(0);
         login.setTranslationX(0);
         forgetPass.setTranslationX(0);
 
         email.setAlpha(v);
-        contraseña.setAlpha(v);
+        pass.setAlpha(v);
         login.setAlpha(v);
         forgetPass.setAlpha(v);
 
         email.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        contraseña.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        pass.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(500).start();
         forgetPass.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(500).start();
         login.animate().translationY(0).alpha(1).setDuration(800).setStartDelay(700).start();
+
+        if (firebaseAuth.getCurrentUser() != null) {
+            goHome();
+            getActivity().finish();
+        }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(awesomeValidation.validate()){
                     String mail = email.getText().toString();
-                    String password = contraseña.getText().toString();
+                    String password = pass.getText().toString();
                     firebaseAuth.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
