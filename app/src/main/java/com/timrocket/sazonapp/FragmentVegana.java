@@ -2,18 +2,33 @@ package com.timrocket.sazonapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FragmentVegana#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentVegana extends Fragment {
+public class FragmentVegana extends Fragment implements AdapterView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,9 +38,33 @@ public class FragmentVegana extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ListView mListView;
+    private List<String> mLista = new ArrayList<>();
+    private ArrayAdapter<String> mAdapter;
 
     public FragmentVegana() {
         // Required empty public constructor
+    }
+
+    private void getData (FirebaseFirestore db, String category) {
+        db.collection("Restaurants")
+                .whereEqualTo("category", category)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("TAG", document.getId() + " => " + document.getData());
+                                mLista.add((String) document.get("name"));
+                                mAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,mLista);
+                                mListView.setAdapter(mAdapter);
+                            }
+                        } else {
+                            Log.w("TAG", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
     }
 
     /**
@@ -59,6 +98,16 @@ public class FragmentVegana extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vegana, container, false);
+        View root = inflater.inflate(R.layout.fragment_vegana, container, false);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        mListView = root.findViewById(R.id.vListView);
+        mListView.setOnItemClickListener(this);
+        getData(db, "vegana");
+        return root;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(getActivity(), "Item seleccionado: "+ i, Toast.LENGTH_SHORT).show();
     }
 }
